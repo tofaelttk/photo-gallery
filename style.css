@@ -1,121 +1,186 @@
+/* Global Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background: linear-gradient(to bottom, #f0f8ff, #ffffff); /* Modern blue to white gradient */
   color: #333;
   scroll-behavior: smooth;
 }
 
 header {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 10px;
+  background: rgba(0, 0, 102, 0.8); /* Dark blue with transparency */
+  padding: 15px;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .nav-link {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
-  transition: color 0.3s;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .nav-link:hover {
-  color: #feb47b;
+  color: #ffcc00; /* Gold hover effect */
+  transform: scale(1.1);
 }
 
+/* Section Styles */
 .section {
-  padding: 100px 20px;
+  padding: 120px 20px;
   text-align: center;
 }
 
 .title {
   font-size: 2.5em;
+  color: #003366; /* Deep blue for titles */
+  text-transform: uppercase;
   margin-bottom: 20px;
+  position: relative;
 }
 
+.title:after {
+  content: \"\\272F\"; /* Star of David */
+  font-size: 1.2em;
+  color: #ffcc00;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  animation: rotate-star 3s infinite linear;
+}
+
+@keyframes rotate-star {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Gallery Styles */
 .photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
 }
 
 .photo {
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.photo:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .photo img {
   width: 100%;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.3s;
 }
 
-.photo img:hover {
+.photo:hover img {
   transform: scale(1.1);
 }
 
 .overlay {
   position: absolute;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 102, 0.8);
   color: #fff;
   width: 100%;
   text-align: center;
   padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
+.photo:hover .overlay {
+  opacity: 1;
+}
+
+/* Article Styles */
 .article {
   margin: 20px auto;
-  max-width: 600px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  max-width: 800px;
+  padding: 25px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border: 2px solid #003366;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s;
 }
 
 .article:hover {
-  transform: translateY(-10px);
+  transform: translateY(-15px);
 }
 
 .headline {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  font-size: 1.8em;
+  color: #003366;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .paragraph {
-  font-size: 1em;
-  line-height: 1.6;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #555;
 }
 
 .link {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 15px;
   padding: 10px 20px;
-  background: #ff7e5f;
+  background: #003366;
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .link:hover {
-  background: #feb47b;
+  background: #ffcc00;
+  transform: scale(1.1);
 }
 
+/* Footer */
 .footer {
   text-align: center;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  background: #003366;
   color: #fff;
 }
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section {
+  animation: fadeIn 2s ease-in-out;
+}
+
