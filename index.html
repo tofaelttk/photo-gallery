@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photo Gallery</title>
+  <title>Jewish Heritage Photo Gallery</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,17 +14,28 @@
       <a href="#more" class="nav-link">More</a>
     </nav>
   </header>
-
+  
   <section id="about" class="section">
-    <h1 class="title">About</h1>
+    <h1 class="title"><span>About</span></h1>
     <p class="description">Welcome to our website. Here you'll find an amazing collection of photos and more information about what we offer.</p>
-
-    <!-- Advisor Section -->
+    
+    <!-- Advisor Section with Enhanced Animation -->
     <div class="profile-card">
-      <img src="images/advisor.jpg" alt="Advisor" class="profile-photo">
+      <div class="photo-container">
+        <img src="images/advisor.jpg" alt="Advisor" class="profile-photo">
+        <div class="star-of-david">
+          <div class="star-description">
+            <div class="star-description-triangle triangle-1">Ph.D. in Jewish Studies</div>
+            <div class="star-description-triangle triangle-2">20+ Years Experience</div>
+            <div class="star-description-triangle triangle-3">Academic Research</div>
+            <div class="star-description-triangle triangle-4">Cultural Historian</div>
+            <div class="star-description-triangle triangle-5">Community Leader</div>
+          </div>
+        </div>
+      </div>
       <div class="profile-info">
-        <h2>Advisor</h2>
-        <p>Dr. Rebecca Rubinstein, your dedicated advisor for this amazing journey.</p>
+        <h2>Dr. Rebecca Rubinstein</h2>
+        <p>Your dedicated advisor for this amazing journey through Jewish heritage.</p>
         <div class="profile-links">
           <a href="mailto:rrubinstein@springfieldcollege.edu" class="icon-link email-icon">Email</a>
           <a href="https://advisorwebsite.example.com" target="_blank" class="icon-link website-icon">Website</a>
@@ -32,12 +43,23 @@
       </div>
     </div>
 
-    <!-- Presenter Section -->
+    <!-- Presenter Section with Enhanced Animation -->
     <div class="profile-card">
-      <img src="images/presenter.jpg" alt="Presenter" class="profile-photo">
+      <div class="photo-container">
+        <img src="images/presenter.jpg" alt="Presenter" class="profile-photo">
+        <div class="star-of-david">
+          <div class="star-description">
+            <div class="star-description-triangle triangle-1">Tech Innovator</div>
+            <div class="star-description-triangle triangle-2">Software Engineer</div>
+            <div class="star-description-triangle triangle-3">Cultural Educator</div>
+            <div class="star-description-triangle triangle-4">Open Source Contributor</div>
+            <div class="star-description-triangle triangle-5">Community Connector</div>
+          </div>
+        </div>
+      </div>
       <div class="profile-info">
-        <h2>Presenter</h2>
-        <p>Tarik Hossain, the creative mind behind this coding course.</p>
+        <h2>Tarik Hossain</h2>
+        <p>The creative mind behind this innovative coding course.</p>
         <div class="profile-links">
           <a href="mailto:thossain@springfieldcollege.edu" class="icon-link email-icon">Email</a>
           <a href="https://github.com/thossain" target="_blank" class="icon-link github-icon">GitHub</a>
@@ -47,22 +69,46 @@
   </section>
 
   <section id="gallery" class="section">
-    <h1 class="title">Photo Gallery</h1>
+    <h1 class="title"><span>Photo Gallery</span></h1>
     <div class="photo-grid">
+      <!-- Photo 1 with Star of David Overlay -->
       <div class="photo">
-        <img src="images/photo1.jpg" alt="Description 1">
-        <div class="overlay">Description 1</div>
+        <div class="photo-container">
+          <img src="images/photo1.jpg" alt="Jewish Heritage Image 1">
+          <div class="star-of-david">
+            <div class="star-description">
+              <div class="star-description-triangle triangle-1">Historical Context</div>
+              <div class="star-description-triangle triangle-2">Cultural Significance</div>
+              <div class="star-description-triangle triangle-3">Artistic Details</div>
+              <div class="star-description-triangle triangle-4">Personal Story</div>
+              <div class="star-description-triangle triangle-5">Historical Impact</div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Photo 2 with Star of David Overlay -->
       <div class="photo">
-        <img src="images/photo2.jpg" alt="Description 2">
-        <div class="overlay">Description 2</div>
+        <div class="photo-container">
+          <img src="images/photo2.jpg" alt="Jewish Heritage Image 2">
+          <div class="star-of-david">
+            <div class="star-description">
+              <div class="star-description-triangle triangle-1">Community Life</div>
+              <div class="star-description-triangle triangle-2">Traditional Practices</div>
+              <div class="star-description-triangle triangle-3">Architectural Beauty</div>
+              <div class="star-description-triangle triangle-4">Family Legacy</div>
+              <div class="star-description-triangle triangle-5">Cultural Resilience</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- Repeat for additional photos -->
+
+      <!-- Additional photos can be added with the same structure -->
     </div>
   </section>
 
   <section id="more" class="section">
-    <h1 class="title">More</h1>
+    <h1 class="title"><span>More</span></h1>
     <article class="article">
       <h2 class="headline">Section 1</h2>
       <p class="paragraph">This is the first section of the More content. You can elaborate further.</p>
@@ -76,7 +122,7 @@
   </section>
 
   <footer class="footer">
-    <p>© 2024 Your Cool Website</p>
+    <p>© 2024 Jewish Heritage Gallery</p>
   </footer>
 
   <script src="script.js"></script>
