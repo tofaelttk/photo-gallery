@@ -70,7 +70,7 @@ header {
 }
 
 .description {
-  margin-bottom: 80px:
+  margin-bottom: 80px;
 }
 
 /* Profile Card Styles with Enhanced Animations */
@@ -190,8 +190,6 @@ header {
   transform: translateY(0);
 }
 
-/* More Section */
-
 /* More Section Styles */
 #more {
   display: flex;
@@ -270,7 +268,6 @@ header {
 .link:hover {
   background: #005f99;
 }
-
 
 /* Footer Styles */
 .footer {
