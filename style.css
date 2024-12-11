@@ -209,14 +209,14 @@ header {
 .article-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
 }
 
 /* Article Box Styling */
 .article {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   perspective: 1000px; /* For 3D flip effect */
 }
 
