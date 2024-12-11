@@ -386,7 +386,7 @@ header {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .article {
     width: 100%;
     max-width: 400px;
