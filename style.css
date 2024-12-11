@@ -69,6 +69,10 @@ header {
   position: relative;
 }
 
+.description {
+  margin-bottom: 40px:
+}
+
 /* Profile Card Styles with Enhanced Animations */
 .profile-card {
   display: inline-block;
