@@ -278,9 +278,9 @@ header {
 /* Link Styling */
 .link {
   font-size: 1rem;
-  color: #0f0f0f;
+  color: #fff;
   text-decoration: none;
-  background-color: #fff:
+  background-color: #333:
   padding: 5px 10px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
