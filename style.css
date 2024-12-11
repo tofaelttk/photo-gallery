@@ -76,6 +76,7 @@ header {
   text-align: center;
   perspective: 1000px;
   transition: transform 0.5s;
+  margin-top: 40px;
 }
 
 .profile-photo {
