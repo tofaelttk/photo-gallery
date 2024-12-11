@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Photo Gallery</title>
+  <title>Professional Portfolio Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,8 +27,12 @@
         <h2>R. Rubinstein</h2>
         <p>Dedicated advisor providing guidance and expertise for this project.</p>
         <div class="profile-links">
-          <a href="mailto:rrubinstein@springfieldcollege.edu" class="icon-link" title="Email Advisor">📧</a>
-          <a href="https://springfieldcollege.edu" class="icon-link" title="Visit Advisor's Website">🌐</a>
+          <a href="mailto:rrubinstein@springfieldcollege.edu" class="icon-link" title="Email Advisor">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://springfieldcollege.edu" class="icon-link" title="Visit Advisor's Website">
+            <i class="fas fa-globe"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -39,8 +44,12 @@
         <h2>T. Hossain</h2>
         <p>Creator and developer of this platform, passionate about coding and innovation.</p>
         <div class="profile-links">
-          <a href="mailto:thossain@springfieldcollege.edu" class="icon-link" title="Email Creator">📧</a>
-          <a href="https://github.com" class="icon-link" title="Visit GitHub">🐙</a>
+          <a href="mailto:thossain@springfieldcollege.edu" class="icon-link" title="Email Creator">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://github.com" class="icon-link" title="Visit GitHub">
+            <i class="fab fa-github"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -49,16 +58,16 @@
   <section id="gallery" class="section">
     <h1 class="title">Photo Gallery</h1>
     <div class="photo-grid">
-      <div class="photo">
-        <img src="images/photo1.jpg" alt="Description 1">
+      <div class="photo" data-description="A serene landscape capturing the essence of nature's beauty">
+        <img src="images/photo1.jpg" alt="Landscape Scene">
         <div class="overlay">
-          <p class="description">Description 1</p>
+          <p class="description">A serene landscape capturing the essence of nature's beauty</p>
         </div>
       </div>
-      <div class="photo">
-        <img src="images/photo2.jpg" alt="Description 2">
+      <div class="photo" data-description="Urban architecture showcasing modern design and geometric patterns">
+        <img src="images/photo2.jpg" alt="Urban Architecture">
         <div class="overlay">
-          <p class="description">Description 2</p>
+          <p class="description">Urban architecture showcasing modern design and geometric patterns</p>
         </div>
       </div>
     </div>
@@ -79,7 +88,7 @@
   </section>
 
   <footer class="footer">
-    <p>© 2024 Your Cool Website</p>
+    <p>© 2024 Your Professional Portfolio</p>
   </footer>
 
   <script src="script.js"></script>
