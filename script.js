@@ -33,6 +33,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // More Section Flip Card Interaction
+  const articles = document.querySelectorAll('.article');
+
+  articles.forEach(article => {
+    const articleInner = article.querySelector('.article-inner');
+    
+    // Hover interaction for desktop
+    article.addEventListener('mouseenter', () => {
+      articleInner.classList.add('flipped');
+    });
+
+    article.addEventListener('mouseleave', () => {
+      articleInner.classList.remove('flipped');
+    });
+
+    // Touch/Click interaction for mobile and accessibility
+    article.addEventListener('click', () => {
+      articleInner.classList.toggle('flipped');
+    });
+
+    // Keyboard accessibility
+    article.setAttribute('tabindex', '0');
+    article.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        articleInner.classList.toggle('flipped');
+      }
+    });
+  });
+
   // Preload images for smoother experience
   function preloadImages() {
     const imageUrls = [
