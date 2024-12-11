@@ -62,7 +62,7 @@ header {
 }
 
 .title {
-  font-size: 2em;
+  font-size: 1.5em;
   color: #003366; /* Deep blue for titles */
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -301,7 +301,7 @@ header {
   padding: 20px;
   background: #003366;
   color: #fff;
-  font-size: 0.5em;
+  font-size: 0.8em;
 }
 
 /* Animations */
