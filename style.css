@@ -253,7 +253,7 @@ header {
 
 /* Back Side Styling */
 .box .back {
-  background-color: #1e90ff;
+  background-color: #003366;
   color: #fff;
   transform: rotateY(180deg);
 }
