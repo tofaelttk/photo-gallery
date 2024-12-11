@@ -15,18 +15,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Toggle photo description on click for mobile
+  // Enhanced photo interaction with modal-like description
   const photos = document.querySelectorAll('.photo');
-
+  
   photos.forEach(photo => {
+    // Optional: Add click event for mobile/touch devices
     photo.addEventListener('click', () => {
-      if (photo.classList.contains('clicked')) {
-        photo.classList.remove('clicked');
-      } else {
-        // Remove 'clicked' class from all photos first
-        photos.forEach(p => p.classList.remove('clicked'));
-        photo.classList.add('clicked');
+      photo.classList.toggle('active');
+    });
+
+    // Accessibility: Add keyboard navigation
+    photo.setAttribute('tabindex', '0');
+    photo.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        photo.classList.toggle('active');
       }
     });
+  });
+
+  // Preload images for smoother experience
+  function preloadImages() {
+    const imageUrls = [
+      'images/advisor.jpg', 
+      'images/presenter.jpg', 
+      'images/photo1.jpg', 
+      'images/photo2.jpg'
+    ];
+
+    imageUrls.forEach(url => {
+      const img = new Image();
+      img.src = url;
+    });
+  }
+  preloadImages();
+
+  // Scroll-based animation for sections
+  const sections = document.querySelectorAll('.section');
+  
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const sectionObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => {
+    sectionObserver.observe(section);
   });
 });
