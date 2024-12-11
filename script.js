@@ -1,6 +1,16 @@
-// Optional: Add GSAP animations
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.from("header", { duration: 1, y: -100, opacity: 0 });
-  gsap.from("#gallery h1", { duration: 1, x: -200, opacity: 0, delay: 0.5 });
+document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+      
+      window.scrollTo({
+        top: targetSection.offsetTop - 50,
+        behavior: 'smooth'
+      });
+    });
+  });
 });
-
