@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Smooth scrolling for navigation links
   const navLinks = document.querySelectorAll('.nav-link');
   
   navLinks.forEach(link => {
@@ -11,6 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
         top: targetSection.offsetTop - 50,
         behavior: 'smooth'
       });
+    });
+  });
+
+  // Toggle photo description on click for mobile
+  const photos = document.querySelectorAll('.photo');
+
+  photos.forEach(photo => {
+    photo.addEventListener('click', () => {
+      if (photo.classList.contains('clicked')) {
+        photo.classList.remove('clicked');
+      } else {
+        // Remove 'clicked' class from all photos first
+        photos.forEach(p => p.classList.remove('clicked'));
+        photo.classList.add('clicked');
+      }
     });
   });
 });
