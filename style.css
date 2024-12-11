@@ -203,7 +203,6 @@ header {
   width: 300px;
   height: 400px;
   perspective: 1000px;
-  position: relative;
 }
 
 .article-inner {
@@ -212,10 +211,10 @@ header {
   position: relative;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  cursor: pointer;
+  transform-origin: center;
 }
 
-.article.flipped .article-inner {
+.article:hover .article-inner {
   transform: rotateY(180deg);
 }
 
@@ -293,20 +292,6 @@ header {
     width: 100%;
     max-width: 400px;
     margin-bottom: 20px;
-  }
-}
-
-/* Optional: Add subtle animation to initial state */
-.article-inner {
-  animation: subtle-float 3s ease-in-out infinite alternate;
-}
-
-@keyframes subtle-float {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10px);
   }
 }
 
