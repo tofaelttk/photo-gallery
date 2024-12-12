@@ -117,9 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeAnimationTarget) {
     new Typed("#type-animation", {
       strings: [
-        "Welcome to EliteTriangle",
-        "Connecting Innovative Minds",
-        "Your Academic Network Hub",
+        "Intertwining histories that shape the nation's evolving ideals",
+        "A journey of resilience, adaptation, and cultural synthesis",
+        "Voices that redefine the American dream through inclusion",
       ],
       typeSpeed: 50,
       backSpeed: 50,
