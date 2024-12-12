@@ -309,6 +309,27 @@ header {
 }
 
 
+
+.pdf-container {
+  position: relative;
+  width: 100%; /* Full width of the parent container */
+  padding-bottom: 100%; /* Aspect ratio to adjust dynamically */
+  height: 0; /* Ensures height is based on aspect ratio */
+  overflow: hidden; /* Ensures iframe fits properly */
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+}
+
+.pdf-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of container */
+  height: 100%; /* Full height of container */
+  border: none;
+}
+
+
 /* Footer Styles */
 .footer {
   text-align: center;
