@@ -69,6 +69,14 @@ header {
   position: relative;
 }
 
+.animated-message {
+  font-size: 1.5rem;
+  color: #003366;
+  margin: 20px 0;
+  text-align: center;
+}
+
+
 .description {
   margin-bottom: 80px;
 }
