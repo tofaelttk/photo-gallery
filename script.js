@@ -112,4 +112,19 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(section => {
     sectionObserver.observe(section);
   });
+  // Typing animation for the hero section
+  const typeAnimationTarget = document.querySelector('#type-animation');
+  if (typeAnimationTarget) {
+    new Typed("#type-animation", {
+      strings: [
+        "Welcome to EliteTriangle",
+        "Connecting Innovative Minds",
+        "Your Academic Network Hub",
+      ],
+      typeSpeed: 50,
+      backSpeed: 50,
+      backDelay: 2000,
+      loop: true,
+    });
+  }
 });
