@@ -290,6 +290,25 @@ header {
   background-color: #555;
 }
 
+
+.video-container {
+  position: relative;
+  width: 100%; /* Full width of the parent container */
+  padding-bottom: 56.25%; /* Aspect ratio for 16:9 videos */
+  height: 0; /* Ensure height is 0 for proper aspect ratio scaling */
+  overflow: hidden; /* Ensures the iframe doesn't overflow */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Makes the iframe width 100% of the parent */
+  height: 100%; /* Makes the iframe height proportional */
+  border: 0; /* Removes iframe border */
+}
+
+
 /* Footer Styles */
 .footer {
   text-align: center;
