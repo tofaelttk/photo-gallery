@@ -215,8 +215,8 @@ header {
 
 /* Article Box Styling */
 .article {
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   perspective: 1000px; /* For 3D flip effect */
 }
 
